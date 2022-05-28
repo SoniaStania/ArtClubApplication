@@ -1,0 +1,63 @@
+﻿body {
+    background-image: url(../images/login-image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.shop {
+    font-family: arial;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    background-color: greenyellow;
+    color: white;
+    transition: opacity 0.15s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    border-color: none;
+}
+
+    .btn:hover {
+        opacity: 0.8;
+    }
+
+    .btn:active {
+        opacity: 0.3;
+    }
+
+.wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    background: transparent;
+    margin-left: 450px;
+}
+
+    .wrapper p {
+        position: relative;
+        font-size: 22px;
+        font-weight: 300;
+        color: #333;
+    }
+
+        .wrapper p::before {
+            content: '';
+            position: aboslute;
+            top: 0;
+            bottom: 0;
+            height: 3px;
+            width: 28px;
+            background-color: pink;
+        }

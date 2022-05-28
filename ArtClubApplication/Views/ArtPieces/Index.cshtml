@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ArtClubApp.Models.ArtPiece>
+
+@{
+    ViewData["Title"] = "Art Pieces";
+}
+<link rel="stylesheet" href="~/css/artpieces.css" />
+
+
+
+<h1>Here you can see our exposition</h1>
+
+ <div class="text">
+            <marquee width="50%" direction="left" height="50px" bgcolor="red" class="marquee" ;>
+                Our new paintings are waiting for you!!
+                </marquee>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhotoURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                  @if(item.PhotoURL != null)
+                {
+                        <img src="@Url.Content(item.PhotoURL)"/ class="image">
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PieceId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PieceId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PieceId">Delete</a>
+               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

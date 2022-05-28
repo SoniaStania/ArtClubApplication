@@ -1,0 +1,35 @@
+﻿.image {
+    width:500px;
+    cursor:pointer;
+   align-items:center;
+}
+
+.text {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px;
+
+}
+
+body {
+    background-image: url(../images/background1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+.btn {
+    background-color:red;
+    color:black;
+    cursor:pointer;
+    border-radius:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.btn:hover {
+    opacity:0.8;
+}
+.btn:active {
+    opacity:0.1;
+}
